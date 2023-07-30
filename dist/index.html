@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <title>Document</title>
+  <link rel="stylesheet" href="output.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body class="bg-VeryDarkBlue">
+  <section class=" container box-border">
+    <div class=" flex justify-end m-8  flex-col gap-4 items-end">
+      <button class= "userbtn shadow-lg bg-Darkblue px-4 py-2 text-SoftRed rounded-full border-2 text-xl hover:bg-opacity-10">Custom Timer</button>
+      <button class= "deletebtn shadow-lg bg-Darkblue px-4 py-2 text-SoftRed rounded-full border-2 text-xl hover:bg-opacity-10">Reset Timer</button>
+    </div>
+    
+    <img class=" z-10 fixed bottom-0 w-full h-1/4 lg:h-1/4" src="../images/pattern-hills.svg" alt="" >
+   <!--  <img class=" z-0 absolute top-[30%]" src="../images/bg-stars.svg" alt=""> -->
+    <section class="mainTimer mt-16">
+      <h2 class=" event px-4  text-White text-2xl lg:text-xl uppercase font-semibold font-serif text-center [letter-spacing:.2rem]">We're launching Soon</h2>
+      <div class="container px-4 grid grid-cols-4 gap-4 lg:12 max-w-xl mx-auto mt-12 lg:mt-24">
+        <div class=" square flex flex-col gap-4 items-center justify-center">
+          <button class="bg-Darkblue bg-opacity-50  py-6 px-3 w-[100%]  text-SoftRed text-5xl font-bold shadow-lg rounded-lg">00</button >
+          <h4 class="text-GrayishBlue uppercase">Days</h4>
+        </div>
+  
+        <div class=" square flex flex-col gap-4 items-center justify-center">
+          <button class="bg-Darkblue bg-opacity-50 py-6 px-3 w-[100%]  text-SoftRed text-5xl font-bold shadow-lg rounded-lg">00</button >
+          <h4 class="text-GrayishBlue uppercase">Hours</h4>
+        </div>
+  
+        <div class=" square flex flex-col gap-4 items-center justify-center">
+          <button class="bg-Darkblue bg-opacity-50  py-6 px-3 w-[100%]  text-SoftRed text-5xl font-bold shadow-lg rounded-lg">00</button >
+          <h4 class="text-GrayishBlue uppercase">minutes</h4>
+        </div>
+  
+        <div class=" square flex flex-col gap-4 items-center justify-center">
+          <button class="bg-Darkblue bg-opacity-50  py-6 px-3 w-[100%]  text-SoftRed text-5xl font-bold shadow-lg rounded-lg">00</button >
+          <h4 class="text-GrayishBlue uppercase">seconds</h4>
+        </div>
+      </div>
+    </section>
+    <form class=" foam hidden mt-20 relative z-30 chooseCustomEvent container flex  items-center flex-col
+     bg-Darkblue w-[90%] max-w-lg mx-auto rounded-lg gap-4 p-4">
+      <div class="self-end">
+        <button class=" cross absolute top-7 right-5 shadow-lg bg-Darkblue px-4 py-2 text-SoftRed rounded-full border-2 text-xl hover:bg-opacity-10">X</button>
+      </div>
+
+      <div class="flex gap-4 relative right-16 lg:right-20">
+        <label class="text-GrayishBlue">Event Title :</label>
+        <input class="bg-Darkblue border-2 border-GrayishBlue text-SoftRed outline-none text-center py-1 placeholder:text-SoftRed"  type="text" id="title" placeholder="Like For My Birthday" required value="">
+      </div>
+      <div class="grid grid-cols-3 gap-4 w-[90%]  text-GrayishBlue">
+        <div>
+          <label class=" block mb-2" for="Days">Select Year</label>
+          <input class="w-[100px] bg-Darkblue outline-none border-2 border-GrayishBlue text-center text-SoftRed text-xl" type="number" min="2023"  value="2024" id="year" required>
+        </div>
+
+        <div>
+          <label class="block mb-2" for="Days">Select month</label>
+          <input class="w-[100px]  bg-Darkblue outline-none border-2 border-GrayishBlue text-center text-SoftRed text-xl" type="number" min="1" max="12"  value="1" id="month" required>
+        </div>
+
+        <div>
+          <label class="block mb-2" for="Days">Select Date</label>
+          <input class="w-[100px]  bg-Darkblue outline-none border-2 border-GrayishBlue text-center text-SoftRed text-xl"  type="number" min="1" max="31"  value="1" id="day" required>
+        </div>
+
+        <div>
+          <label class="block mb-2" for="Days">Select Hour(24)</label>
+          <input class="w-[100px]  bg-Darkblue outline-none border-2 border-GrayishBlue text-center text-SoftRed text-xl" type="number" min="0" max="24"  value="1" id="hour">
+        </div>
+
+        <div>
+          <label class="block mb-2" for="Days">Select minutes</label>
+          <input class="w-[100px]  bg-Darkblue outline-none border-2 border-GrayishBlue text-center text-SoftRed text-xl" type="number" min="0" max="60"  value="1" id="minutes">
+        </div>
+
+        <div>
+          <label for="submit"></label>
+          <button class=" mt-6 bg-Darkblue  w-full py-1  text-SoftRed rounded-full border-2 text-xl hover:scale-110 shadow-lg" type="submit">Sumbit</button>
+        </div>
+        
+      </div>
+
+
+    </form>
+  
+    <h4 class=" textshow hidden px-4 mt-12 text-White text-xl lg:text-lg uppercase font-semibold font-serif text-center [letter-spacing:.2rem">The countDown has Ended</h4>
+    <div class="flex gap-8 items-center justify-center  w-2/4 mx-auto  fixed bottom-16 left-[25%] z-20">
+      <img class="hover:scale-150  " src="../images/icon-facebook.svg" alt="">
+      <img class= "hover:scale-150"src="../images/icon-instagram.svg" alt="">
+      <img class="hover:scale-150"src="../images/icon-pinterest.svg" alt="">
+    </div>
+
+  </section>
+  
+</body>
+</html>

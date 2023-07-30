@@ -1,0 +1,20 @@
+{
+  "name": "base-apparel-coming-sonn",
+  "version": "1.0.0",
+  "description": "![Design preview for the Base Apparel coming soon page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./src/style.css -o ./dist/output.css --watch",
+    "build" : "postcss src/style.css -o dist/output.css"
+  },
+  "keywords": [],
+  "author": "Hanzala Khan",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "postcss-cli": "^10.1.0"
+  }
+}
