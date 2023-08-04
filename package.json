@@ -6,15 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx tailwindcss -i ./src/style.css -o ./dist/output.css --watch",
-    "build" : "postcss src/style.css -o dist/output.css"
+    "build" : "tailwindcss -i ./src/style.css -o ./dist/output.css"
   },
   "keywords": [],
   "author": "Hanzala Khan",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.3.3"
-  },
-  "dependencies": {
-    "postcss-cli": "^10.1.0"
   }
 }
